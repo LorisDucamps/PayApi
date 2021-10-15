@@ -2,17 +2,7 @@
     <transition name="sidebar">
         <section class="sidebar">
             <img :src='svgIcon' class='sidebar__icon' alt="icon burger">
-            <ul>
-                <li>
-                    <BaseButton link type='button__link-footer' to='/pricing'>Pricing</BaseButton>
-                </li>
-                <li>
-                    <BaseButton link type='button__link-footer' to='/about'>About</BaseButton>
-                </li>
-                <li>
-                    <BaseButton link type='button__link-footer' to='/contact'>Contact</BaseButton>
-                </li>
-            </ul>
+            <TheNavigation class="sidebar__navigation" type="button__link-footer" />
             <div class="actions">
                 <BaseButton type='button__primary'>Schedule a Demo</BaseButton>
             </div>
@@ -22,7 +12,11 @@
 </template>
 
 <script>
+    import TheNavigation from './TheNavigation.vue';
     export default {
+        components: {
+            TheNavigation
+        },
         data() {
             return {
                 mobileNav: true,
@@ -32,7 +26,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .sidebar {
         position: fixed;
         top: 0;
@@ -53,19 +47,27 @@
 
         }
 
-        ul {
-            margin-top: 2.4rem;
-            border-top: 0.1rem solid #404B56;
-
-            a {
-                justify-content: center;
-            }
-        }
-
         .actions {
             margin: 2rem auto 0 auto;
         }
+
+        &__navigation {
+            margin-left: 0 !important;
+
+            ul {
+                margin-top: 2.4rem;
+
+                border-top: 0.1rem solid #404B56;
+                flex-direction: column;
+
+                a {
+                    justify-content: center;
+                }
+            }
+        }
     }
+
+
 
 
 
