@@ -56,6 +56,7 @@
 
             ul {
                 margin-top: 2.4rem;
+                padding-top: 3rem !important;
 
                 border-top: 0.1rem solid #404B56;
                 flex-direction: column;
