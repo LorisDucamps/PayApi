@@ -39,6 +39,8 @@
     .socials {
         margin-left: auto;
         margin-right: -1.2rem;
+        flex-shrink: 0;
+
 
         ul {
             display: flex;
@@ -48,6 +50,12 @@
                 height: 100%;
                 width: 2.4rem;
             }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .socials {
+            margin-left: initial;
         }
     }
 </style>

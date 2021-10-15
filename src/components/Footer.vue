@@ -32,7 +32,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             height: 10rem;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .footer {
+            &__inner {
+                height: inherit;
+                flex-direction: column;
+                padding: 4rem 0;
+
+                nav {
+                    margin: 4rem 0;
+                }
+            }
         }
     }
 </style>

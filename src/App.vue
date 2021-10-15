@@ -94,6 +94,12 @@
   .container {
     max-width: 1190px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 4rem;
+  }
+
+  @media screen and (max-width:768px) {
+    .container {
+      padding: 0 2.4rem;
+    }
   }
 </style>

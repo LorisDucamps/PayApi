@@ -9,7 +9,7 @@
 <script>
     export default {
         props: {
-            imageSource : {
+            imageSource: {
                 type: String,
                 required: false,
                 default: ''
@@ -19,6 +19,8 @@
     }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+    .logo {
+        flex-shrink: 0;
+    }
 </style>
