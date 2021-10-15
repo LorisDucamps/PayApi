@@ -83,6 +83,10 @@
             color: var(--secondary-san-juan-blue-70);
             text-decoration: none;
 
+            &.router-link-active {
+                color: var(--secondary-san-juan-blue);
+            }
+
             &:hover {
                 color: var(--secondary-san-juan-blue);
             }
@@ -93,6 +97,10 @@
             padding: 0 2rem;
             color: var(--primary-link-water-white-70);
             text-decoration: none;
+
+            &.router-link-active {
+                color: var(--primary-link-water-white);
+            }
 
             &:hover {
                 color: var(--primary-link-water-white);
