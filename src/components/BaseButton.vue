@@ -107,6 +107,10 @@
             }
         }
 
+        &__link-text {
+            color:pink;
+        }
+
         &__social {
             min-width: inherit;
             padding: 0 1.2rem;

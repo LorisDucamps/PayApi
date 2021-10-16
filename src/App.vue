@@ -23,6 +23,9 @@
 
   // variables CSS
   :root {
+
+    // HEX : #EDF3F8
+    --background: hsla(209, 46%, 95%, 1);
     // HEX : #ba4270
     --primary-dark-pink: hsla(337, 48%, 49%, 1);
 
@@ -65,9 +68,39 @@
   body {
     margin: 0;
     font-size: 1.6rem;
-    background-color: #FBFCFE;
+    background-color: var(--background);
     -webkit-text-size-adjust: 100%;
     font-family: 'Public Sans', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--secondary-san-juan-blue);
+    font-weight: 400;
+  }
+
+  h1,
+  .h1 {
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 4.8rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 3.2rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 2.4rem;
   }
 
   #app {
@@ -99,7 +132,14 @@
 
   @media screen and (max-width:768px) {
     .container {
-      padding: 0 2.4rem;
+      max-width: 68.6rem;
+      // padding: 0 2.4rem;
+
+      h1,
+      .h1 {
+        font-size: 4.8rem;
+        line-height: 5.6rem;
+      }
     }
   }
 </style>

@@ -1,7 +1,8 @@
 <template>
   <div class="intro">
     <div class="container">
-      <h1>HOME</h1>
+      <Hero />
+
     </div>
   </div>
 
@@ -130,8 +131,12 @@
 </template>
 
 <script>
+import Hero from '../components/Hero.vue';
   export default {
     name: 'Home',
+    components: {
+      Hero
+    }
   }
 </script>
 
