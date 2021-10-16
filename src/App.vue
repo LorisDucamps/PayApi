@@ -192,5 +192,14 @@
         width: 78rem;
       }
     }
+
+    .container {
+
+      h1,
+      .h1 {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+      }
+    }
   }
 </style>
