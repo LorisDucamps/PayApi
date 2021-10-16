@@ -40,12 +40,19 @@
         }
     }
 
+    @media screen and (max-width:991.98px) {
+        .input {
+            margin: 0 auto;
+        }
+    }
+
     @media screen and (max-width:575.98px) {
         .input {
             max-width: 100%;
 
             &__email {
                 margin-bottom: 1.6rem;
+                padding: 0 2.7rem 0 2.7rem;
                 box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
             }
 

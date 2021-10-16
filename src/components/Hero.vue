@@ -66,13 +66,19 @@
                 flex-direction: column;
                 gap: 4.8rem;
                 max-width: 57.3rem;
-                margin: initial auto;
+                margin: 4.8rem auto 10rem auto;
             }
 
             &__lead {
                 order: 1;
 
                 h1 {
+                    text-align: center;
+                    margin-bottom: 3.2rem;
+                }
+
+                p {
+                    margin-left: 0;
                     text-align: center;
                 }
             }
