@@ -78,7 +78,7 @@
                 }
 
                 p {
-                    margin-left: 0;
+                    margin-left: 0 !important;
                     text-align: center;
                 }
             }
