@@ -67,7 +67,7 @@
                 flex-direction: column;
 
                 a {
-                    justify-content: center;
+                    font-size: 2rem !important;
                 }
             }
         }
