@@ -98,7 +98,15 @@
     @media screen and (max-width:575.98px) {
         .hero {
             .row {
+                gap: 2.4rem;
                 margin: 3.2rem auto 8rem auto;
+            }
+
+            &__image {
+
+                img {
+                    max-width: 12.8rem;
+                }
             }
         }
     }
