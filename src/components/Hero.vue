@@ -94,4 +94,12 @@
             }
         }
     }
+
+    @media screen and (max-width:575.98px) {
+        .hero {
+            .row {
+                margin: 3.2rem auto 8rem auto;
+            }
+        }
+    }
 </style>
