@@ -4,7 +4,7 @@
             <div class="hero__lead">
                 <h1>Start building with our APIs for absolutely free.</h1>
                 <EmailInput />
-                <p>Have any questions ? <BaseButton link type="button__link-text">Contact Us</BaseButton>
+                <p>Have any questions ? <BaseButton link type="button__link-text" to='/contact'>Contact Us</BaseButton>
                 </p>
             </div>
             <div class="hero__image">
@@ -32,8 +32,15 @@
 
         .row {
             display: flex;
+            align-items: center;
             gap: 6.5rem;
             margin: 7.4rem 0;
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 2.7rem;
+            }
         }
 
         &__lead {
@@ -52,14 +59,14 @@
         }
     }
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:991.98px) {
         .hero {
 
             .row {
                 flex-direction: column;
                 gap: 4.8rem;
                 max-width: 57.3rem;
-                margin: 0 auto;
+                margin: initial auto;
             }
 
             &__lead {

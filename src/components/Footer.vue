@@ -2,8 +2,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
-                <TheLogo :imageSource="require('@/assets/images/logo-light.svg')" />
-                <TheNavigation type="button__link-footer" />
+                <Logo :imageSource="require('@/assets/images/logo-light.svg')" />
+                <Navigation type="button__link-footer" />
                 <BaseSocial />
             </div>
         </div>
@@ -11,13 +11,13 @@
 </template>
 
 <script>
-    import TheLogo from './TheLogo.vue';
-    import TheNavigation from './TheNavigation.vue'
+    import Logo from './Logo.vue';
+    import Navigation from './Navigation.vue'
     import BaseSocial from './BaseSocial.vue';
     export default {
         components: {
-            TheLogo,
-            TheNavigation,
+            Logo,
+            Navigation,
             BaseSocial
         }
 
@@ -37,7 +37,7 @@
         }
     }
 
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767.98px) {
         .footer {
             &__inner {
                 height: inherit;

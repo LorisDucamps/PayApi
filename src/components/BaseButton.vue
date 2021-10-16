@@ -32,6 +32,7 @@
 <style lang="scss" scoped>
     .button {
         display: flex;
+        justify-content: center;
         height: 4.8rem;
         min-width: 12.9rem;
         font-family: 'Public Sans', sans-serif;
@@ -49,6 +50,7 @@
         &__primary {
             color: #FFF;
             background-color: #BA4270;
+            box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
 
             &:hover {
                 background-color: #DA6D97;
@@ -108,7 +110,11 @@
         }
 
         &__link-text {
-            color:pink;
+            display: inline-flex;
+            padding-left: 0;
+            padding-right: 0;
+            min-width: inherit;
+            text-decoration: none;
         }
 
         &__social {
@@ -121,6 +127,13 @@
                 fill: var(--secondary-charm-pink);
             }
         }
+    }
 
+    @media screen and (max-width:575.98px) {
+        .button {
+            &__primary {
+                text-align: center;
+            }
+        }
     }
 </style>

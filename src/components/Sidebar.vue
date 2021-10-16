@@ -1,8 +1,8 @@
 <template>
     <transition name="sidebar">
         <section class="sidebar">
-            <img :src='svgIcon' class='sidebar__icon' alt="icon burger">
-            <TheNavigation class="sidebar__navigation" type="button__link-footer" />
+            <img @click="$emit('close')" :src='svgIcon' class='sidebar__icon' alt="icon burger">
+            <Navigation class="sidebar__navigation" type="button__link-footer" />
             <div class="actions">
                 <BaseButton type='button__primary'>Schedule a Demo</BaseButton>
             </div>
@@ -12,14 +12,14 @@
 </template>
 
 <script>
-    import TheNavigation from './TheNavigation.vue';
+    import Navigation from './Navigation.vue';
     export default {
+        emits: ['close'],
         components: {
-            TheNavigation
+            Navigation
         },
         data() {
             return {
-                mobileNav: true,
                 svgIcon: require('../assets/images/close.svg')
             }
         },
@@ -37,7 +37,8 @@
         width: 100%;
         max-width: 30rem;
         padding: 4.8rem 2.4rem 2.4rem 2.4rem;
-        background-color: var(--secondary-mirage-blue);
+        background-color: var(--secondary-mirage-blue-98);
+        z-index: 1;
 
         &__icon {
             height: 2.3rem;
@@ -48,7 +49,11 @@
         }
 
         .actions {
-            margin: 2rem auto 0 auto;
+            margin: 2rem 0 0 0;
+
+            .button {
+                width: 100%;
+            }
         }
 
         &__navigation {

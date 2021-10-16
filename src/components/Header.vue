@@ -2,14 +2,14 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <TheLogo :imageSource="require('@/assets/images/logo-dark.svg')" />
-        <TheNavigation type="button__link-header" v-show='!mobile' />
+        <Logo :imageSource="require('@/assets/images/logo-dark.svg')" />
+        <Navigation type="button__link-header" v-show='!mobile' />
 
         <!-- MENU ICON MOBILE -->
         <img :src="svgIcon" @click='toggleMobileNav' class='header__icon' v-show='mobile' alt="icon burger">
         <!-- /MENU ICON MOBILE -->
 
-        <TheSidebar v-show="mobileNav" />
+        <Sidebar @close="toggleMobileNav" v-show="mobileNav" />
 
         <div v-show='!mobile' class="actions">
           <BaseButton type='button__primary'>Schedule a Demo</BaseButton>
@@ -20,15 +20,15 @@
 </template>
 
 <script>
-  import TheLogo from './TheLogo.vue';
-  import TheNavigation from './TheNavigation.vue';
-  import TheSidebar from './TheSidebar.vue';
+  import Logo from './Logo.vue';
+  import Navigation from './Navigation.vue';
+  import Sidebar from './Sidebar.vue';
   export default {
     name: 'Header',
     components: {
-      TheLogo,
-      TheNavigation,
-      TheSidebar
+      Logo,
+      Navigation,
+      Sidebar
     },
 
     data() {
@@ -48,7 +48,7 @@
     methods: {
       checkScreen() {
         this.windowWidth = window.innerWidth;
-        if (this.windowWidth <= 768) {
+        if (this.windowWidth <= 767.98) {
           this.mobile = true
           return
         }
@@ -58,7 +58,7 @@
       },
       toggleMobileNav() {
         this.mobileNav = !this.mobileNav;
-      }
+      },
     }
   }
 </script>

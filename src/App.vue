@@ -35,10 +35,13 @@
 
     // HEX : #36536b
     --secondary-san-juan-blue: hsla(207, 33%, 32%, 1);
+    --secondary-san-juan-blue-15: hsla(207, 33%, 32%, 0.15);
+    --secondary-san-juan-blue-50: hsla(207, 33%, 32%, 0.5);
     --secondary-san-juan-blue-70: hsla(207, 33%, 32%, 0.7);
 
     // HEX : #1b262f
     --secondary-mirage-blue: hsla(207, 27%, 15%, 1);
+    --secondary-mirage-blue-98: hsla(207, 27%, 15%, 0.98);
 
     // HEX : #da6d97
     --secondary-charm-pink: hsla(337, 60%, 64%, 1);
@@ -66,11 +69,26 @@
   }
 
   body {
+    position: relative;
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     background-color: var(--background);
     -webkit-text-size-adjust: 100%;
     font-family: 'Public Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  body:after {
+    content:'';
+    position: absolute;
+    top: -17.2rem;
+    right: -14rem;
+    height: 78rem;
+    width: 78rem;
+    border-radius: 100rem;
+    z-index: 0;
+    background: var(--secondary-san-juan-blue-15);
+    z-index: -1;
   }
 
   h1,
@@ -80,6 +98,8 @@
     font-family: 'DM Serif Display', serif;
     color: var(--secondary-san-juan-blue);
     font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 2.4rem;
   }
 
   h1,
@@ -103,8 +123,13 @@
     font-size: 2.4rem;
   }
 
+  p,
+  span {
+    color: var(--secondary-light-san-juan-blue);
+  }
+
   #app {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   img,
@@ -130,9 +155,9 @@
     padding: 0 4rem;
   }
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width:991.98px) {
     .container {
-      max-width: 68.6rem;
+      //max-width: 68.6rem;
       // padding: 0 2.4rem;
 
       h1,
