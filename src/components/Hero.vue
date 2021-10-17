@@ -10,19 +10,19 @@
             <picture class="hero__image">
                 <!-- DESKTOP -->
                 <source media="(min-width: 992px)"
-                    srcset="../assets/images/phone/phone-desktop.png 1x, ../assets/images/phone/phone-desktop-2x.png 2x"
+                    srcset="@/assets/images/phone/phone-desktop.png 1x, @/assets/images/phone/phone-desktop-2x.png 2x"
                     type="image/png" alt="phone">
 
                 <!-- TABLET -->
                 <source media="(min-width: 768px)"
-                    srcset="../assets/images/phone/phone-tablet.png 1x, ../assets/images/phone/phone-tablet-2x.png 2x"
+                    srcset="@/assets/images/phone/phone-tablet.png 1x, @/assets/images/phone/phone-tablet-2x.png 2x"
                     type="image/png" alt="phone">
 
                 <source media="(min-width: 320px)"
-                    srcset="../assets/images/phone/phone-mobile.png 1x, ../assets/images/phone/phone-mobile-2x.png 2x"
+                    srcset="@/assets/images/phone/phone-mobile.png 1x, @/assets/images/phone/phone-mobile-2x.png 2x"
                     type="image/png" alt="phone">
 
-                <img src="../assets/images/phone/phone-desktop.png" alt="Phone PayApi">
+                <img src="@/assets/images/phone/phone-desktop.png" alt="Phone PayApi">
             </picture>
         </div>
     </section>
