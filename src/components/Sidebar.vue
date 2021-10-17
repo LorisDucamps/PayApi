@@ -20,7 +20,7 @@
         },
         data() {
             return {
-                svgIcon: require('../assets/images/close.svg')
+                svgIcon: require('../assets/images/menu/close.svg')
             }
         },
     }

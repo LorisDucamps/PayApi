@@ -6,24 +6,6 @@
     </div>
   </div>
 
-
-  <!-- <div class="intro">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-6">
-          <h1>Start building with our APIs for absolutely free.</h1>
-          <input type="text" placeholder="Enter email address">
-          <button>Schedule a Demo</button>
-          <p>Have any questions ? <router-link to="/contact">Contact Us</router-link>
-          </p>
-        </div>
-        <div class="col-xl-6">
-          <img class="phone" src="../assets/images/phone-intro-2x.png" alt="phone message">
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <!-- <div class="company">
     <div class="container">
       <h2>Who we work with</h2>

@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
-                <Logo :imageSource="require('@/assets/images/logo-light.svg')" />
+                <Logo :imageSource="require('@/assets/images/logo/logo-light.svg')" />
                 <Navigation type="button__link-footer" />
                 <BaseSocial />
             </div>

@@ -2,7 +2,7 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <Logo :imageSource="require('@/assets/images/logo-dark.svg')" />
+        <Logo :imageSource="require('@/assets/images/logo/logo-dark.svg')" />
         <Navigation type="button__link-header" v-show='!mobile' />
 
         <!-- MENU ICON MOBILE -->
@@ -36,7 +36,7 @@
         mobile: null,
         mobileNav: null,
         windowWidth: '',
-        svgIcon: require('../assets/images/menu.svg')
+        svgIcon: require('../assets/images/menu/menu.svg')
       }
     },
 

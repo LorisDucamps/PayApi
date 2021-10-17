@@ -159,8 +159,6 @@
   @media screen and (max-width:991.98px) {
 
     .container {
-      //max-width: 68.6rem;
-      // padding: 0 2.4rem;
 
       h1,
       .h1 {

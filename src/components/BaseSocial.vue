@@ -4,7 +4,7 @@
             <li>
                 <BaseButton class='button__social'>
                     <svg class="icon">
-                        <use v-bind="{ 'xlink:href': require('../assets/images/sprite.svg') + '#facebook' }">
+                        <use v-bind="{ 'xlink:href': require('../assets/images/socials/sprite-socials.svg') + '#facebook' }">
                         </use>
                     </svg>
                 </BaseButton>
@@ -12,7 +12,7 @@
             <li>
                 <BaseButton class='button__social'>
                     <svg class="icon">
-                        <use v-bind="{ 'xlink:href': require('../assets/images/sprite.svg') + '#twitter' }">
+                        <use v-bind="{ 'xlink:href': require('../assets/images/socials/sprite-socials.svg') + '#twitter' }">
                         </use>
                     </svg>
                 </BaseButton>
@@ -20,7 +20,7 @@
             <li>
                 <BaseButton class='button__social'>
                     <svg class="icon">
-                        <use v-bind="{ 'xlink:href': require('../assets/images/sprite.svg') + '#linkedin' }">
+                        <use v-bind="{ 'xlink:href': require('../assets/images/socials/sprite-socials.svg') + '#linkedin' }">
                         </use>
                     </svg>
                 </BaseButton>
