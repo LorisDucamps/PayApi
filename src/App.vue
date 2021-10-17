@@ -194,6 +194,7 @@
     }
 
     .container {
+      padding: 0 2.4rem;
 
       h1,
       .h1 {
