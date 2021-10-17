@@ -7,10 +7,23 @@
                 <p>Have any questions ? <BaseButton link type="button__link-text" to='/contact'>Contact Us</BaseButton>
                 </p>
             </div>
-            <div class="hero__image">
-                <!-- SRC SET RESPONSIVE IMG -->
-                <img src="../assets/images/phone-intro-2x.png" alt="Phone PayApi">
-            </div>
+            <picture class="hero__image">
+                <!-- DESKTOP -->
+                <source media="(min-width: 992px)"
+                    srcset="../assets/images/Phone/phone-desktop.png 1x, ../assets/images/Phone/phone-desktop-2x.png 2x"
+                    type="image/png" alt="phone">
+
+                <!-- TABLET -->
+                <source media="(min-width: 768px)"
+                    srcset="../assets/images/Phone/phone-tablet.png 1x, ../assets/images/Phone/phone-tablet-2x.png 2x"
+                    type="image/png" alt="phone">
+
+                <source media="(min-width: 320px)"
+                    srcset="../assets/images/Phone/phone-mobile.png 1x, ../assets/images/Phone/phone-mobile-2x.png 2x"
+                    type="image/png" alt="phone">
+
+                <img src="../assets/images/Phone/phone-desktop.png" alt="Phone PayApi">
+            </picture>
         </div>
 
 
@@ -55,6 +68,7 @@
                 max-width: 26.3rem;
                 margin-left: auto;
                 margin-right: 9.7rem;
+                box-shadow: 25px 25px 80px rgba(54, 83, 107, 0.300727);
             }
         }
     }
