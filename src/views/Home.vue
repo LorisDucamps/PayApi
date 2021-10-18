@@ -1,59 +1,13 @@
 <template>
   <div class="home">
-      <Hero />
-      <Work />
-
+    <Hero />
+    <Work />
+    <section class="functioning">
+      <Functioning :content="functioning" v-for="(functioning, index) in functioning" :key="index" />
+    </section>
   </div>
 
-  <!-- <div class="company">
-    <div class="container">
-      <h2>Who we work with</h2>
-      <p>Today, millions of people around the world have successfully connected their accounts to apps they love
-        using our API. We provide developers with the tools they need to create easy and accessible experiences for
-        their users. </p>
-      <div class="logo-company">
-        <img src="../assets/images/logo-tesla.svg" alt="tesla">
-        <img src="../assets/images/logo-microsoft.svg" alt="microsoft">
-        <img src="../assets/images/logo-hp.svg" alt="hp">
-
-        <img src="../assets/images/logo-oracle.svg" alt="oracle">
-        <img src="../assets/images/logo-google.svg" alt="google">
-        <img src="../assets/images/logo-nvidia.svg" alt="nvidia">
-      </div>
-    </div>
-  </div>
-
-  <div class="description">
-    <div class="container">
-      <div class="row">
-          <figure>
-            <img src="../assets/images/code.png" alt="image code">
-
-          </figure>
-          <div class="content-1">
-            <h2>Easy to implement</h2>
-            <p>Our API comes with just a few lines of code. You’ll be up and running in no time. We built our
-              documentation page to integrate payments functionality with ease.</p>
-          </div>
-
-      </div>
-      <div class="row">
-        <div class="col-xl-5">
-          <div class="content-2">
-            <h2>Simple UI & UX</h2>
-            <p>Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize
-              conversion. </p>
-          </div>
-        </div>
-        <div class="col-xl-7">
-          <figure>
-            <img class="double-phone" src="../assets/images/double-phone.png" alt="double phone">
-          </figure>
-
-        </div>
-      </div>
-    </div>
-  </div>
+  <!--
 
   <div class="features">
     <div class="container">
@@ -112,16 +66,50 @@
 </template>
 
 <script>
-import Hero from '../components/Hero.vue';
-import Work from '../components/Work.vue';
+  import Hero from '../components/Hero.vue';
+  import Work from '../components/Work.vue';
+  import Functioning from '../components/Functioning.vue';
   export default {
     name: 'Home',
+    data() {
+      return {
+        functioning: [{
+            id: 0,
+            title: 'Easy to implement',
+            description: 'Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.',
+            images: {
+              imgDesktop: require('../assets/images/functioning/code-desktop.png'),
+              imgDesktop2x: require('../assets/images/functioning/code-desktop-2x.png'),
+              imgTablet: require('../assets/images/functioning/code-tablet.png'),
+              imgTablet2x: require('../assets/images/functioning/code-tablet-2x.png'),
+              imgMobile: require('../assets/images/functioning/code-mobile.png'),
+              imgMobile2x: require('../assets/images/functioning/code-mobile-2x.png'),
+            }
+          },
+          {
+            id: 1,
+            title: 'Simple UI & UX',
+            description: 'Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.',
+            images: {
+              imgDesktop: require('../assets/images/functioning/phone-desktop.png'),
+              imgDesktop2x: require('../assets/images/functioning/phone-desktop-2x.png'),
+              imgTablet: require('../assets/images/functioning/phone-tablet.png'),
+              imgTablet2x: require('../assets/images/functioning/phone-tablet-2x.png'),
+              imgMobile: require('../assets/images/functioning/phone-mobile.png'),
+              imgMobile2x: require('../assets/images/functioning/phone-mobile-2x.png'),
+            }
+          }
+        ]
+      }
+    },
     components: {
       Hero,
-      Work
+      Work,
+      Functioning
     }
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
 </style>
