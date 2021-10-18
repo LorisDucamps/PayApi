@@ -1,9 +1,8 @@
 <template>
-  <div class="intro">
-    <div class="container">
+  <div class="home">
       <Hero />
+      <Work />
 
-    </div>
   </div>
 
   <!-- <div class="company">
@@ -114,10 +113,12 @@
 
 <script>
 import Hero from '../components/Hero.vue';
+import Work from '../components/Work.vue';
   export default {
     name: 'Home',
     components: {
-      Hero
+      Hero,
+      Work
     }
   }
 </script>

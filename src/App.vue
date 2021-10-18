@@ -24,6 +24,8 @@
   // variables CSS
   :root {
 
+    // HEX : #FFFFFF
+    --white: hsla(0, 0%, 100%, 1);
     // HEX : #EDF3F8
     --background: hsla(209, 46%, 95%, 1);
     // HEX : #ba4270
@@ -98,6 +100,7 @@
   h2,
   .h2 {
     font-size: 4.8rem;
+    margin-bottom: 2.4rem !important;
   }
 
   h3,
@@ -113,6 +116,10 @@
   p,
   span {
     color: var(--secondary-light-san-juan-blue);
+  }
+
+  p {
+    line-height: 2.8rem;
   }
 
   #app {
@@ -195,7 +202,9 @@
       padding: 0 2.4rem;
 
       h1,
-      .h1 {
+      .h1,
+      h2,
+      .h2 {
         font-size: 3.2rem;
         line-height: 3.6rem;
       }

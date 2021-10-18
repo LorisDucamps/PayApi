@@ -1,5 +1,5 @@
 <template>
-    <section class="hero">
+    <section class="hero container">
         <div class="row">
             <div class="hero__lead">
                 <h1>Start building with our APIs for absolutely free.</h1>
