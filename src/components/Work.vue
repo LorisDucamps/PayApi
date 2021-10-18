@@ -140,14 +140,8 @@
         .work {
             .row {
                 flex-direction: column;
-                gap: 5.6rem;
+                gap: 7rem;
                 padding: 8rem 0;
-            }
-
-            &__lead {
-                p {
-                    margin-bottom: 6rem;
-                }
             }
 
             &__image {
