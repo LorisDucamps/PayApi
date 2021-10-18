@@ -11,7 +11,8 @@
                         experiences for
                         their users. </p>
                     <div class="actions">
-                        <BaseButton type="button__secondary-light" to='/about'>About Us</BaseButton>
+                        <BaseButton link type="button__secondary-light button__link-button" to='/about'>About Us
+                        </BaseButton>
                     </div>
 
                 </div>

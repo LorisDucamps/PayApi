@@ -117,6 +117,11 @@
             text-decoration: none;
         }
 
+        &__link-button {
+            display: inline-flex;
+            text-decoration: none;
+        }
+
         &__social {
             min-width: inherit;
             padding: 0 1.2rem;
