@@ -5,6 +5,9 @@
     <section class="functioning container">
       <Functioning :content="functioning" v-for="(functioning, index) in functioning" :key="index" />
     </section>
+    <section class="features container">
+      <Features :content="feature" v-for="(feature, index) in features" :key="index" />
+    </section>
   </div>
 
   <!--
@@ -69,6 +72,7 @@
   import Hero from '../components/Hero.vue';
   import Work from '../components/Work.vue';
   import Functioning from '../components/Functioning.vue';
+  import Features from '../components/Features.vue';
   export default {
     name: 'Home',
     data() {
@@ -99,13 +103,33 @@
               imgMobile2x: require('../assets/images/functioning/phone-mobile-2x.png'),
             }
           }
+        ],
+        features: [{
+            id: 0,
+            title: 'Personal Finances',
+            description: 'Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account. ',
+            idSprite: '#personal'
+          },
+          {
+            id: 1,
+            title: 'Banking & Coverage',
+            description: 'With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit card, and brokerage accounts.',
+            idSprite: '#banking'
+          },
+          {
+            id: 2,
+            title: 'Consumer Payments',
+            description: 'It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account.',
+            idSprite: '#consumer'
+          }
         ]
       }
     },
     components: {
       Hero,
       Work,
-      Functioning
+      Functioning,
+      Features
     }
   }
 </script>

@@ -113,6 +113,11 @@
     font-size: 2.4rem;
   }
 
+  h5,
+  .h5 {
+    font-size: 1.8rem;
+  }
+
   p,
   span {
     color: var(--secondary-light-san-juan-blue);
