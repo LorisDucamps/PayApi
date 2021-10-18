@@ -41,10 +41,24 @@
     .hero {
 
         .row {
+            position: relative;
             display: flex;
             align-items: center;
             gap: 6.5rem;
             margin: 7.4rem 0;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -33.4rem;
+                right: -30.5rem;
+                height: 78rem;
+                width: 78rem;
+                border-radius: 100rem;
+                z-index: 0;
+                background: var(--secondary-san-juan-blue-15);
+                z-index: -1;
+            }
 
             p {
                 margin-top: 0;
@@ -78,6 +92,14 @@
                 gap: 4.8rem;
                 max-width: 57.3rem;
                 margin: 4.8rem auto 10rem auto;
+
+                &:before {
+                    top: -80rem;
+                    left: calc(50% - 47rem);
+                    right: calc(50% - 47rem);
+                    height: 94.9rem;
+                    width: 94.9rem;
+                }
             }
 
             &__lead {
@@ -111,6 +133,14 @@
             .row {
                 gap: 2.4rem;
                 margin: 3.2rem auto 8rem auto;
+
+                &:before {
+                    top: -66rem;
+                    left: calc(50% - 39rem);
+                    right: calc(50% - 39rem);
+                    height: 78rem;
+                    width: 78rem;
+                }
             }
 
             &__image {

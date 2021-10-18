@@ -127,19 +127,6 @@
     overflow-x: hidden;
   }
 
-  #app:before {
-    content: '';
-    position: absolute;
-    top: -17.2rem;
-    right: -14rem;
-    height: 78rem;
-    width: 78rem;
-    border-radius: 100rem;
-    z-index: 0;
-    background: var(--secondary-san-juan-blue-15);
-    z-index: -1;
-  }
-
   img,
   svg {
     display: block;
@@ -175,28 +162,9 @@
     }
   }
 
-  @media screen and (max-width:767.98px) {
-    #app {
-      &:before {
-        top: -66.3rem;
-        left: calc(50% - 47rem);
-        right: calc(50% - 47rem);
-        height: 94.9rem;
-        width: 94.9rem;
-      }
-    }
-  }
+  @media screen and (max-width:767.98px) {}
 
   @media screen and (max-width:575.98px) {
-    #app {
-      &:before {
-        top: -55rem;
-        left: calc(50% - 39rem);
-        right: calc(50% - 39rem);
-        height: 78rem;
-        width: 78rem;
-      }
-    }
 
     .container {
       padding: 0 2.4rem;

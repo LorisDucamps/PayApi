@@ -74,18 +74,34 @@
 
 <style lang="scss" scoped>
     .work {
+        position: relative;
+        overflow: hidden;
         background-color: var(--secondary-mirage-blue);
 
         .row {
+            position: relative;
             display: flex;
             align-items: center;
             gap: 3rem;
             padding: 10rem 0;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -23.5rem;
+                bottom: 5.1rem;
+                height: 78rem;
+                width: 78rem;
+                border-radius: 100%;
+                background-color: var(--secondary-san-juan-blue-15);
+                z-index: 0;
+            }
         }
 
 
         &__lead {
             max-width: 44.5rem;
+            z-index: 1;
 
             h2 {
                 color: var(--primary-link-water-white);
@@ -98,6 +114,7 @@
         }
 
         &__image {
+
             display: grid;
             grid-template-columns: repeat(3, minmax(auto, 16rem));
             align-items: center;
@@ -106,6 +123,7 @@
             column-gap: 3rem;
             margin-left: auto;
             max-width: 53.6rem;
+            z-index: 1;
 
             svg {
                 fill: var(--white);
@@ -119,6 +137,19 @@
                 flex-direction: column;
                 gap: 6.4rem;
                 padding: 8.8rem 0;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: calc(50% - 39rem);
+                    right: calc(50% - 39rem);
+                    top: -55rem;
+                    height: 78rem;
+                    width: 78rem;
+                    border-radius: 100%;
+                    background-color: var(--secondary-san-juan-blue-15);
+                    z-index: 0;
+                }
             }
 
             &__lead {
