@@ -174,6 +174,19 @@
                 flex-direction: column;
                 gap: 7rem;
                 padding: 8rem 0;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: calc(50% - 39rem);
+                    right: calc(50% - 39rem);
+                    top: -60rem;
+                    height: 78rem;
+                    width: 78rem;
+                    border-radius: 100%;
+                    background-color: var(--secondary-san-juan-blue-15);
+                    z-index: 0;
+                }
             }
 
             &__image {
