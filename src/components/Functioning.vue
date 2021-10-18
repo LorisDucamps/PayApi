@@ -1,5 +1,5 @@
 <template>
-    <div class="function container">
+    <div class="function">
         <div class="row">
             <picture class="function__image">
                 <!-- DESKTOP -->

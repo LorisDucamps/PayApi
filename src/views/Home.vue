@@ -2,7 +2,7 @@
   <div class="home">
     <Hero />
     <Work />
-    <section class="functioning">
+    <section class="functioning container">
       <Functioning :content="functioning" v-for="(functioning, index) in functioning" :key="index" />
     </section>
   </div>
@@ -111,5 +111,29 @@
 </script>
 
 <style lang="scss" scoped>
+  .functioning {
+    position: relative;
 
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -15rem;
+      right: -51.3rem;
+      height: 78rem;
+      width: 78rem;
+      border-radius: 100rem;
+      z-index: 0;
+      background: var(--secondary-san-juan-blue-15);
+      z-index: -1;
+    }
+
+  }
+
+  @media screen and (max-width:991.98px) {
+    .functioning {
+      &:before {
+        display: none;
+      }
+    }
+  }
 </style>
