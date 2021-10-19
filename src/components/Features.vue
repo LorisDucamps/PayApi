@@ -23,20 +23,25 @@
 
 <style lang="scss" scoped>
     .feature {
+        text-align: center;
+
         .row {
             h5 {}
 
-            p {}
+            p {
+                letter-spacing: -0.012rem;
+            }
 
         }
 
         &__picture {
-            display:flex;
+            display: flex;
             justify-content: center;
-            align-items:center;
-            height:10.6rem;
-            width:10.6rem;
+            align-items: center;
+            height: 10.6rem;
+            width: 10.6rem;
             border-radius: 100%;
+            margin: 0 auto;
             background-color: var(--secondary-san-juan-blue);
         }
     }

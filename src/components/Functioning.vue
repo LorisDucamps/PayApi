@@ -7,7 +7,7 @@
                     :srcset="`${content.images.imgDesktop} 1x, ${content.images.imgDesktop2x} 2x`" type="image/png"
                     :alt="content.images.imgDesktop">
 
-                    <!-- TABLET -->
+                <!-- TABLET -->
                 <source media="(min-width: 768px)"
                     :srcset="`${content.images.imgTablet} 1x, ${content.images.imgTablet2x} 2x`" type="image/png"
                     :alt="content.images.imgTablet">
@@ -90,6 +90,12 @@
 
             &__image {
                 margin: 0 auto;
+            }
+
+            &:nth-child(even) {
+                .function__image {
+                    order: 0;
+                }
             }
         }
     }

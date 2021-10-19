@@ -9,63 +9,6 @@
       <Features :content="feature" v-for="(feature, index) in features" :key="index" />
     </section>
   </div>
-
-  <!--
-
-  <div class="features">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-4">
-          <div class="feature">
-            <div class="circle">
-              <img src="../assets/images/personal-finances.svg" alt="">
-            </div>
-            <h3>Personal Finances</h3>
-            <p>Consolidate financial data from multiple sources and categorize transactions up to 2 years of history.
-              Analyze reports to reconcile activities in your account. </p>
-          </div>
-
-        </div>
-        <div class="col-xl-4">
-          <div class="feature">
-            <div class="circle">
-              <img src="../assets/images/banking-coverage.svg" alt="">
-            </div>
-            <h3>Banking & Coverage</h3>
-            <p>With our platform, you can speed up account onboarding and support ongoing payments for checking,
-              savings, credit card, and brokerage accounts.</p>
-          </div>
-        </div>
-        <div class="col-xl-4">
-          <div class="feature">
-            <div class="circle">
-              <img src="../assets/images/consumer-payments.svg" alt="">
-            </div>
-            <h3>Consumer Payments</h3>
-            <p>It’s easier to set up secure bank payments with us through a flow designed with the user experience in
-              mind. Customers could instantly authenticate their account.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="ready">
-    <div class="container">
-      <div class="row">
-        <div class="ready__inner">
-          <div class="title">
-            <h3>Ready to Start ?</h3>
-          </div>
-          <div class="bloc-input">
-            <input type="text" placeholder="Enter email address">
-            <button>Schedule a Demo</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </template>
 
 <script>
@@ -153,11 +96,25 @@
 
   }
 
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 9.6rem;
+  }
+
   @media screen and (max-width:991.98px) {
     .functioning {
       &:before {
         display: none;
       }
     }
+  }
+
+  @media screen and (max-width:767.98px) {
+    .features {
+      grid-template-columns: inherit;
+    }
+
   }
 </style>

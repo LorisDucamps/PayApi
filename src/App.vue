@@ -1,17 +1,18 @@
 <template>
   <Header />
   <router-view />
-  <!-- CTA -->
-  <!-- FOOTER -->
+  <CallToAction />
   <Footer />
 </template>
 
 <script>
   import Header from './components/Header.vue';
+  import CallToAction from './components/CallToAction.vue';
   import Footer from './components/Footer.vue';
   export default {
     components: {
       Header,
+      CallToAction,
       Footer
     }
 
@@ -116,6 +117,9 @@
   h5,
   .h5 {
     font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: var(--secondary-san-juan-blue);
+    margin: 3.2rem 0 1.6rem 0;
   }
 
   p,
