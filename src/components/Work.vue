@@ -1,7 +1,7 @@
 <template>
     <section class="work">
         <div class="container">
-            <div class="row">
+            <div class="work__inner">
                 <div class="work__lead">
                     <h2>Who we work with</h2>
                     <p>Today, millions of people around the world have successfully connected their accounts to apps
@@ -66,19 +66,13 @@
     </section>
 </template>
 
-<script>
-    export default {
-
-    }
-</script>
-
 <style lang="scss" scoped>
     .work {
         position: relative;
         overflow: hidden;
         background-color: var(--secondary-mirage-blue);
 
-        .row {
+        &__inner {
             position: relative;
             display: flex;
             align-items: center;
@@ -133,7 +127,7 @@
 
     @media screen and (max-width:991.98px) {
         .work {
-            .row {
+            &__inner {
                 flex-direction: column;
                 gap: 6.4rem;
                 padding: 8.8rem 0;
@@ -170,7 +164,7 @@
 
     @media screen and (max-width:575.98px) {
         .work {
-            .row {
+            &__inner {
                 flex-direction: column;
                 gap: 7rem;
                 padding: 8rem 0;
