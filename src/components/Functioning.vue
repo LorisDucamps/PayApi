@@ -1,6 +1,8 @@
 <template>
     <div class="function">
         <div class="row">
+
+            <!-- IMAGE ONE -->
             <picture class="function__image">
                 <!-- DESKTOP -->
                 <source media="(min-width: 992px)"
@@ -18,6 +20,26 @@
 
                 <img :src="content.images.imgDesktop" :alt="content.images.imgDesktop">
             </picture>
+
+            <!-- IMAGE TWO -->
+            <picture v-if="content.doubleImages" class="function__image">
+                <!-- DESKTOP -->
+                <source media="(min-width: 992px)"
+                    :srcset="`${content.imagesTwo.imgDesktop} 1x, ${content.imagesTwo.imgDesktop2x} 2x`" type="image/png"
+                    :alt="content.imagesTwo.imgDesktop">
+
+                <!-- TABLET -->
+                <source media="(min-width: 768px)"
+                    :srcset="`${content.imagesTwo.imgTablet} 1x, ${content.imagesTwo.imgTablet2x} 2x`" type="image/png"
+                    :alt="content.imagesTwo.imgTablet">
+
+                <source media="(min-width: 320px)"
+                    :srcset="`${content.imagesTwo.imgMobile} 1x, ${content.imagesTwo.imgMobile2x} 2x`" type="image/png"
+                    :alt="content.imagesTwo.imgMobile">
+
+                <img :src="content.imagesTwo.imgDesktop" :alt="content.imagesTwo.imgDesktop">
+            </picture>
+
             <div class="function__lead">
                 <h2>{{content.title}}</h2>
                 <p>{{content.description}}</p>

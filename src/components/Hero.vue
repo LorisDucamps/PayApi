@@ -1,6 +1,6 @@
 <template>
     <section class="hero container">
-        <div class="row">
+        <div class="hero__inner">
             <div class="hero__lead">
                 <h1>Start building with our APIs for absolutely free.</h1>
                 <EmailInput />
@@ -40,7 +40,7 @@
 <style lang="scss" scoped>
     .hero {
 
-        .row {
+        &__inner {
             position: relative;
             display: flex;
             align-items: center;
@@ -59,17 +59,17 @@
                 background: var(--secondary-san-juan-blue-15);
                 z-index: -1;
             }
+        }
+
+        &__lead {
+            max-width: 54.6rem;
+            width: 100%;
 
             p {
                 margin-top: 0;
                 margin-bottom: 0;
                 margin-left: 2.7rem;
             }
-        }
-
-        &__lead {
-            max-width: 54.6rem;
-            width: 100%;
         }
 
         &__image {
@@ -87,7 +87,7 @@
     @media screen and (max-width:991.98px) {
         .hero {
 
-            .row {
+            &__inner {
                 flex-direction: column;
                 gap: 4.8rem;
                 max-width: 57.3rem;
@@ -105,14 +105,19 @@
             &__lead {
                 order: 1;
 
-                h1 {
+                h1,
+                p {
                     text-align: center;
+                }
+
+                h1 {
+
                     margin-bottom: 3.2rem;
                 }
 
                 p {
-                    margin-left: 0 !important;
-                    text-align: center;
+                    margin-left: 0;
+
                 }
             }
 
@@ -130,7 +135,8 @@
 
     @media screen and (max-width:575.98px) {
         .hero {
-            .row {
+
+            &__inner {
                 gap: 2.4rem;
                 margin: 3.2rem auto 8rem auto;
 

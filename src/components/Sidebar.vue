@@ -73,10 +73,6 @@
         }
     }
 
-
-
-
-
     .sidebar-enter-active,
     .sidebar-leave-active {
         transition: all 1s ease;

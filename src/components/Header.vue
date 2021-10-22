@@ -1,19 +1,15 @@
 <template>
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <Logo :imageSource="require('@/assets/images/logo/logo-dark.svg')" />
-        <Navigation type="button__link-header" v-show='!mobile' />
+  <header class="header container">
+    <div class="header__inner">
+      <Logo :imageSource="require('@/assets/images/logo/logo-dark.svg')" />
+      <Navigation type="button__link-header" v-show='!mobile' />
 
-        <!-- MENU ICON MOBILE -->
-        <img :src="svgIcon" @click='toggleMobileNav' class='header__icon' v-show='mobile' alt="icon burger">
-        <!-- /MENU ICON MOBILE -->
+      <img :src="svgIcon" @click='toggleMobileNav' class='header__icon' v-show='mobile' alt="icon burger">
 
-        <Sidebar @close="toggleMobileNav" v-show="mobileNav" />
+      <Sidebar @close="toggleMobileNav" v-show="mobileNav" />
 
-        <div v-show='!mobile' class="actions">
-          <BaseButton type='button__primary'>Schedule a Demo</BaseButton>
-        </div>
+      <div v-show='!mobile' class="actions">
+        <BaseButton type='button__primary'>Schedule a Demo</BaseButton>
       </div>
     </div>
   </header>
@@ -63,7 +59,6 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   .header {
     margin-top: 4rem;

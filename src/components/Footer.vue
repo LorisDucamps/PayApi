@@ -20,7 +20,6 @@
             Navigation,
             BaseSocial
         }
-
     }
 </script>
 
