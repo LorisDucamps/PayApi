@@ -1,130 +1,85 @@
 <template>
-    <div class="function">
-        <div class="row">
-
-            <!-- IMAGE ONE -->
-            <picture class="function__image">
-                <!-- DESKTOP -->
-                <source media="(min-width: 992px)"
-                    :srcset="`${content.images.imgDesktop} 1x, ${content.images.imgDesktop2x} 2x`" type="image/png"
-                    :alt="content.images.imgDesktop">
-
-                <!-- TABLET -->
-                <source media="(min-width: 768px)"
-                    :srcset="`${content.images.imgTablet} 1x, ${content.images.imgTablet2x} 2x`" type="image/png"
-                    :alt="content.images.imgTablet">
-
-                <source media="(min-width: 320px)"
-                    :srcset="`${content.images.imgMobile} 1x, ${content.images.imgMobile2x} 2x`" type="image/png"
-                    :alt="content.images.imgMobile">
-
-                <img :src="content.images.imgDesktop" :alt="content.images.imgDesktop">
-            </picture>
-
-            <!-- IMAGE TWO -->
-            <picture v-if="content.doubleImages" class="function__image">
-                <!-- DESKTOP -->
-                <source media="(min-width: 992px)"
-                    :srcset="`${content.imagesTwo.imgDesktop} 1x, ${content.imagesTwo.imgDesktop2x} 2x`" type="image/png"
-                    :alt="content.imagesTwo.imgDesktop">
-
-                <!-- TABLET -->
-                <source media="(min-width: 768px)"
-                    :srcset="`${content.imagesTwo.imgTablet} 1x, ${content.imagesTwo.imgTablet2x} 2x`" type="image/png"
-                    :alt="content.imagesTwo.imgTablet">
-
-                <source media="(min-width: 320px)"
-                    :srcset="`${content.imagesTwo.imgMobile} 1x, ${content.imagesTwo.imgMobile2x} 2x`" type="image/png"
-                    :alt="content.imagesTwo.imgMobile">
-
-                <img :src="content.imagesTwo.imgDesktop" :alt="content.imagesTwo.imgDesktop">
-            </picture>
-
-            <div class="function__lead">
-                <h2>{{content.title}}</h2>
-                <p>{{content.description}}</p>
-            </div>
+    <section class="functioning">
+        <div class="container">
+            <FunctioningItem :content="functioning" v-for="(functioning, index) in functioning" :key="index" />
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
+    import FunctioningItem from './FunctioningItem.vue';
     export default {
-        props: ['content'],
+        components: {
+            FunctioningItem
+        },
+        data() {
+            return {
+                functioning: [{
+                        id: 0,
+                        title: 'Easy to implement',
+                        description: 'Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.',
+                        doubleImages: false,
+                        images: {
+                            imgDesktop: require('../assets/images/functioning/code-desktop.png'),
+                            imgDesktop2x: require('../assets/images/functioning/code-desktop-2x.png'),
+                            imgTablet: require('../assets/images/functioning/code-tablet.png'),
+                            imgTablet2x: require('../assets/images/functioning/code-tablet-2x.png'),
+                            imgMobile: require('../assets/images/functioning/code-mobile.png'),
+                            imgMobile2x: require('../assets/images/functioning/code-mobile-2x.png'),
+                        }
+                    },
+                    {
+                        id: 1,
+                        title: 'Simple UI & UX',
+                        description: 'Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.',
+                        doubleImages: true,
+                        images: {
+                            imgDesktop: require('../assets/images/functioning/phone-desktop-left.png'),
+                            imgDesktop2x: require('../assets/images/functioning/phone-desktop-left-2x.png'),
+                            imgTablet: require('../assets/images/functioning/phone-tablet-left.png'),
+                            imgTablet2x: require('../assets/images/functioning/phone-tablet-left-2x.png'),
+                            imgMobile: require('../assets/images/functioning/phone-mobile-left.png'),
+                            imgMobile2x: require('../assets/images/functioning/phone-mobile-left-2x.png'),
+                        },
+                        imagesTwo: {
+                            imgDesktop: require('../assets/images/functioning/phone-desktop-right.png'),
+                            imgDesktop2x: require('../assets/images/functioning/phone-desktop-right-2x.png'),
+                            imgTablet: require('../assets/images/functioning/phone-tablet-right.png'),
+                            imgTablet2x: require('../assets/images/functioning/phone-tablet-right-2x.png'),
+                            imgMobile: require('../assets/images/functioning/phone-mobile-right.png'),
+                            imgMobile2x: require('../assets/images/functioning/phone-mobile-right-2x.png'),
+                        }
+                    }
+                ],
+            }
+        }
 
     }
 </script>
 
 <style lang="scss" scoped>
-    .function {
-        margin: 15rem auto;
+    .functioning {
+        position: relative;
 
-        .row {
-            display: flex;
-            align-items: center;
-            gap: 4.8rem;
-        }
-
-        &__image {
-            flex-shrink: 0;
-        }
-
-        &__lead {
-            max-width: 44.5rem;
-        }
-
-        // pair
-        &:nth-child(even) {
-
-            .function__image {
-                order: 1;
-                margin-left: auto;
-            }
-
-            .function__lead {
-                order: 0;
-            }
-        }
-
-        // impair
-        &:nth-child(odd) {
-            .function__lead {
-                margin-left: auto;
-                margin-right: 9.7rem;
-            }
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -15rem;
+            right: -51.3rem;
+            height: 78rem;
+            width: 78rem;
+            border-radius: 100rem;
+            z-index: 0;
+            background: var(--secondary-san-juan-blue-15);
+            z-index: -1;
         }
     }
 
     @media screen and (max-width:991.98px) {
-        .function {
-            margin: 10rem 0;
-
-            .row {
-                flex-direction: column;
-
+        .functioning {
+            &:before {
+                display: none;
             }
-
-            &__lead {
-                max-width: 57.3rem;
-                margin: inherit !important;
-                text-align: center;
-            }
-
-            &__image {
-                margin: 0 auto;
-            }
-
-            &:nth-child(even) {
-                .function__image {
-                    order: 0;
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width:575.98px) {
-        .function {
-            margin: 8rem 0;
         }
     }
 </style>
