@@ -39,6 +39,7 @@
     // HEX : #36536b
     --secondary-san-juan-blue: hsla(207, 33%, 32%, 1);
     --secondary-san-juan-blue-15: hsla(207, 33%, 32%, 0.15);
+    --secondary-san-juan-blue-25: hsla(207, 33%, 32%, 0.25);
     --secondary-san-juan-blue-50: hsla(207, 33%, 32%, 0.5);
     --secondary-san-juan-blue-70: hsla(207, 33%, 32%, 0.7);
 
@@ -96,6 +97,12 @@
   .h1 {
     font-size: 7.2rem;
     line-height: 7.2rem;
+  }
+
+  .h1--small {
+    font-size: 5.6rem;
+    line-height: 5.6rem;
+    letter-spacing: 0.043rem;
   }
 
   h2,

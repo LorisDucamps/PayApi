@@ -27,6 +27,7 @@
             border-radius: 2.4rem;
             outline: none;
             background-color: var(--primary-link-water-white);
+            box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
 
             &::-webkit-input-placeholder {
                 color: var(--secondary-san-juan-blue-50);
