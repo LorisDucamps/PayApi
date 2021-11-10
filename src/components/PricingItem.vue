@@ -49,11 +49,13 @@
 
             li {
                 position: relative;
+                display: flex;
                 padding-left: 3.6rem;
                 font-size: 1.6rem;
                 line-height: 2.8rem;
                 opacity: 0.5;
                 color: var(--secondary-san-juan-blue);
+                max-width: 13.6rem;
 
                 &.active {
                     opacity: 1;
@@ -82,5 +84,35 @@
         }
 
 
+    }
+
+    @media screen and (max-width:991.98px) {
+        .pricing__item {
+            h3 {
+                font-size: 2.4rem;
+            }
+
+            h1 {
+                font-size: 4.8rem;
+            }
+
+            ul {
+                li {
+                    margin: 0 auto;
+                }
+            }
+
+            button {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @media screen and (max-width:575.98px) {
+        .pricing__item {
+            h1 {
+                font-size: 5.6rem;
+            }
+        }
     }
 </style>

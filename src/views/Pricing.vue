@@ -150,4 +150,34 @@
     }
 
   }
+
+  @media screen and (max-width:991.98px) {
+    .pricing {
+      h1 {
+        text-align: center;
+        font-size: 4.8rem;
+      }
+
+      .pricing__plan {
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width:767.98px) {
+    .pricing {
+      .pricing__plan {
+        grid-template-columns: inherit;
+        gap: 4.8rem;
+      }
+    }
+  }
+
+  @media screen and (max-width:575.98px) {
+    .pricing {
+      h1 {
+        font-size: 3.2rem;
+      }
+    }
+  }
 </style>
