@@ -25,6 +25,7 @@
 
 <style lang="scss" scoped>
     .pricing__item {
+        position:relative;
 
         h3 {
             color: var(--primary-dark-pink);

@@ -33,8 +33,11 @@
     --white: hsla(0, 0%, 100%, 1);
     // HEX : #EDF3F8
     --background: hsla(209, 46%, 95%, 1);
+    // HEX : #FF0000
+    --error: hsla(0, 100%, 50%, 0.5);
     // HEX : #ba4270
     --primary-dark-pink: hsla(337, 48%, 49%, 1);
+    --primary-dark-pink-50: hsla(337, 48%, 49%, 0.5);
 
     // HEX : #fbfcfe
     --primary-link-water-white: hsla(220, 60%, 99%, 1);

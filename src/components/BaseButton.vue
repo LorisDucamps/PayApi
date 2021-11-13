@@ -55,6 +55,11 @@
             &:hover {
                 background-color: #DA6D97;
             }
+
+            &:disabled {
+                background-color: var(--primary-dark-pink-50);
+                cursor: not-allowed;
+            }
         }
 
         &__secondary-light {

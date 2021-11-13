@@ -48,6 +48,13 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   document.title = 'PayApi' + ' | ' + to.name;
+  if (to.name === 'Home') {
+    document.body.classList.add('background-home')
+    document.body.classList.remove('background-page')
+  } else if (to.name === 'About' || to.name == 'Pricing' || to.name == 'Contact') {
+    document.body.classList.remove('background-home')
+    document.body.classList.add('background-page')
+  }
   next();
 })
 

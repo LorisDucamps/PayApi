@@ -40,6 +40,7 @@
         margin-left: auto;
         margin-right: -1.2rem;
         flex-shrink: 0;
+        z-index:3;
 
 
         ul {

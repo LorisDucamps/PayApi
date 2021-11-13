@@ -135,6 +135,21 @@
 
 <style lang="scss" scoped>
   .pricing {
+    position:relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -69rem;
+      right: -26rem;
+      height: 78rem;
+      width: 78rem;
+      border-radius: 100rem;
+      z-index: 0;
+      background: var(--secondary-san-juan-blue-15);
+      z-index: -1;
+    }
+
     h1 {
       margin-top: 8.2rem;
       margin-bottom: 7.2rem;

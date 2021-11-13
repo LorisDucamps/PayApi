@@ -25,7 +25,21 @@
 
 <style lang="scss" scoped>
     .footer {
+        position: relative;
         background-color: var(--secondary-mirage-blue);
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -54rem;
+            left: calc(100% - 39rem);
+            height: 78rem;
+            width: 78rem;
+            border-radius: 100rem;
+            z-index: 0;
+            background: var(--secondary-san-juan-blue-15);
+        }
 
         &__inner {
             display: flex;
@@ -38,6 +52,12 @@
 
     @media screen and (max-width:767.98px) {
         .footer {
+
+            &:before {
+                bottom: -58rem;
+                left: calc(50% - 39rem);
+            }
+
             &__inner {
                 height: inherit;
                 flex-direction: column;

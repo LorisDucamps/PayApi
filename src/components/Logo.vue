@@ -22,5 +22,6 @@
 <style lang="scss" scoped>
     .logo {
         flex-shrink: 0;
+        z-index:3;
     }
 </style>

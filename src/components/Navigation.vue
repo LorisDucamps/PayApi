@@ -30,6 +30,7 @@
 <style lang="scss" scoped>
     nav {
         margin-left: 4.4rem;
+        z-index: 3;
 
         ul {
             display: flex;
