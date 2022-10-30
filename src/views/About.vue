@@ -1,21 +1,36 @@
 <template>
-    <div class="about container">
+  <div class="about">
+    <div class="container">
       <div class="about__inner">
         <h1 class="h1--small">We empower innovators by delivering access to the financial system</h1>
+        <!-- STRATEGY -->
+        <Strategy />
       </div>
     </div>
+    <PictureCollaborators />
+
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'About',
 
-    }
+import Strategy from "@/components/Strategy";
+import PictureCollaborators from "@/components/PictureCollaborators";
+
+
+export default {
+  name: 'About',
+  components: {
+    Strategy,
+    PictureCollaborators,
+  },
+
+}
 </script>
 
 <style lang="scss" scoped>
 .about {
-  position:relative;
+  position: relative;
 
   &:before {
     content: '';
@@ -44,7 +59,7 @@
 
 }
 
-@media screen and (max-width:991.98px) {
+@media screen and (max-width: 991.98px) {
   .about {
 
     &__inner {
@@ -60,11 +75,12 @@
   }
 }
 
-@media screen and (max-width:767.98px) {
-  .about {}
+@media screen and (max-width: 767.98px) {
+  .about {
+  }
 }
 
-@media screen and (max-width:575.98px) {
+@media screen and (max-width: 575.98px) {
   .about {
     h1 {
       font-size: 3.2rem;

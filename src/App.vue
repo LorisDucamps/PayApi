@@ -24,6 +24,7 @@
 </script>
 
 <style lang="scss">
+@import '@/styles/variables.scss';
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;700&display=swap');
 
   // variables CSS
